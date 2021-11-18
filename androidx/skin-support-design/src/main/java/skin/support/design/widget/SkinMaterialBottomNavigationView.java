@@ -47,17 +47,6 @@ public class SkinMaterialBottomNavigationView extends BottomNavigationView imple
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.BottomNavigationView, defStyleAttr,
                 R.style.Widget_Design_BottomNavigationView);
-
-        if (a.hasValue(R.styleable.BottomNavigationView_itemIconTint)) {
-            mIconTintResId = a.getResourceId(R.styleable.BottomNavigationView_itemIconTint, INVALID_ID);
-        } else {
-            mDefaultTintResId = resolveColorPrimary();
-        }
-        if (a.hasValue(R.styleable.BottomNavigationView_itemTextColor)) {
-            mTextColorResId = a.getResourceId(R.styleable.BottomNavigationView_itemTextColor, INVALID_ID);
-        } else {
-            mDefaultTintResId = resolveColorPrimary();
-        }
         a.recycle();
         applyItemIconTintResource();
         applyItemTextColorResource();
